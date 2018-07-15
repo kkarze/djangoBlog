@@ -5,7 +5,8 @@ from django.db import models
 
 # Create your models here.
 
-class BlogsPost(models.Model):
+class Article(models.Model):
         title = models.CharField(max_length=150)
         body = models.TextField()
         timestamp = models.DateTimeField()
+        update_time = models.DateTimeField("update", auto_now=True, null=True)

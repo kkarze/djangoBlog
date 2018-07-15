@@ -37,8 +37,10 @@
          <div class="starter-template">
 
              {% for blog in blog_list %}
+                 <hr>
                  <h2>{{ blog.title }}</h2>
-                 <p>{{ blog.timestamp }}</p>
+                 <p>Publish:{{ blog.timestamp }}</p> 
+                 <p>Update:{{ blog.update_time}}</p>
                  <p>{{ blog.body }}</p>
              {% endfor %}
          </div>
