@@ -7,7 +7,8 @@ from blog.models import Article
 # Create your views here.
 
 def index(request):
-	return HttpResponse(u"Welcome to Django.")
+    #return HttpResponse(u"Welcome to Django.")
+    return render(request, 'index.html', {})
 
 def blog_index(request):
     blog_list = Article.objects.all()
